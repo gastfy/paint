@@ -1,0 +1,38 @@
+﻿<Window x:Class="UluhaPaint.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UluhaPaint"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="950">
+    <Window.CommandBindings>
+        <CommandBinding Command="Help" Executed="getColor"/>
+        <CommandBinding Command="Save" Executed="SavePicture"/>
+    </Window.CommandBindings>
+    <Grid x:Name="Grid" DataContext="{Binding model}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <InkCanvas x:Name="Canvas" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Height="380px" Width="800px" DefaultDrawingAttributes="{Binding DrawingAttributes}">
+        </InkCanvas>
+        <Button x:Name="ChooseColor" Grid.Row="0" Grid.Column="0" Margin="10" Content="Изменить цвет" Command="Help"/>
+        <Button x:Name="SaveDraw" Content="Сохранить" Grid.Row="0" Grid.Column="5" Margin="20" Command="Save"/>
+        <TextBox x:Name="BrushHeight" Grid.Row="0" Grid.Column="1" materialDesign:HintAssist.Hint="Brush Height" Margin="25" Text="{Binding DrawingAttributes.Height}" DataContext="{Binding model}">
+        </TextBox>
+        <TextBox x:Name="BrushWidth" Grid.Row="0" Grid.Column="2" materialDesign:HintAssist.Hint="Brush Width" Margin="25" Text="{Binding DrawingAttributes.Width}" DataContext="{Binding model}">
+        </TextBox>
+        <CheckBox x:Name="isHighlighter" Grid.Row="0" Grid.Column="3" Content="Is Highlighter?" Margin="20" IsChecked="{Binding DrawingAttributes.IsHighlighter}" DataContext="{Binding model}"/>
+        <CheckBox x:Name="isFitToCurve" Grid.Row="0" Grid.Column="4" Content="Is Fit to Curve?" Margin="20" IsChecked="{Binding DrawingAttributes.FitToCurve}" DataContext="{Binding model}"/>
+    </Grid>
+</Window>

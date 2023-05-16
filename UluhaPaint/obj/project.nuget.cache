@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "EjF2GApPAmHJfY5pSqACV7kARfnVHKck13TZWNGRBukqNJ4UmWvy3z+8PsjGqgJZ1yZ4EBrd0Ghf507RT7LGSQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gastf\\source\\repos\\UluhaPaint\\UluhaPaint\\UluhaPaint.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gastf\\.nuget\\packages\\materialdesigncolors\\2.1.2\\materialdesigncolors.2.1.2.nupkg.sha512",
+    "C:\\Users\\gastf\\.nuget\\packages\\materialdesignthemes\\4.8.0\\materialdesignthemes.4.8.0.nupkg.sha512",
+    "C:\\Users\\gastf\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
